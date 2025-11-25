@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #f8fafc;
+  }
+}
+
+@layer components {
+  /* Glass card variants */
+  .glass-card {
+    @apply backdrop-blur-glass-lg bg-glass-bg-light border border-glass-border rounded-2xl shadow-glass p-6;
+  }
+  
+  .glass-card-medium {
+    @apply backdrop-blur-glass-lg bg-glass-bg-medium border border-glass-border rounded-2xl shadow-glass p-8;
+  }
+  
+  .glass-card-large {
+    @apply backdrop-blur-glass-xl bg-glass-bg-medium border-2 border-glass-border rounded-3xl shadow-glass-lg p-10;
+  }
+  
+  /* Button variants */
+  .btn-glass {
+    @apply px-6 py-3 rounded-xl backdrop-blur-glass-md bg-glass-bg-light border border-glass-border 
+           text-text-primary font-medium transition-all duration-300 hover:bg-glass-bg-medium 
+           hover:shadow-glass active:scale-95;
+  }
+  
+  .btn-accent-blue {
+    @apply px-6 py-3 rounded-xl border font-medium transition-all duration-300 active:scale-95;
+    background: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+  }
+  
+  .btn-accent-blue:hover {
+    background: rgba(56, 189, 248, 0.3);
+    @apply shadow-glow-blue;
+  }
+  
+  .btn-accent-indigo {
+    @apply px-6 py-3 rounded-xl border font-medium transition-all duration-300 active:scale-95;
+    background: rgba(129, 140, 248, 0.2);
+    border-color: rgba(129, 140, 248, 0.4);
+    color: #818cf8;
+  }
+  
+  .btn-accent-indigo:hover {
+    background: rgba(129, 140, 248, 0.3);
+    @apply shadow-glow-indigo;
+  }
+  
+  .btn-accent-pink {
+    @apply px-6 py-3 rounded-xl border font-medium transition-all duration-300 active:scale-95;
+    background: rgba(236, 72, 153, 0.2);
+    border-color: rgba(236, 72, 153, 0.4);
+    color: #ec4899;
+  }
+  
+  .btn-accent-pink:hover {
+    background: rgba(236, 72, 153, 0.3);
+    @apply shadow-glow-pink;
+  }
+  
+  /* Input fields */
+  .input-glass {
+    @apply px-4 py-3 rounded-xl backdrop-blur-glass-md bg-glass-bg-light border border-glass-border 
+           text-text-primary transition-all duration-300 focus:outline-none focus:border-accent-blue 
+           focus:shadow-glow-blue;
+  }
+  
+  .input-glass::placeholder {
+    color: rgba(203, 213, 225, 0.5);
+  }
+  
+  /* Text styles */
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-accent-blue to-accent-indigo bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-pink {
+    @apply bg-gradient-to-r from-accent-pink to-accent-indigo bg-clip-text text-transparent;
+  }
+}
+
