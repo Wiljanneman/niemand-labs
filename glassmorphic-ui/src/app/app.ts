@@ -2,12 +2,14 @@ import { Component, signal, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { isPlatformBrowser, NgClass } from '@angular/common';
 import { EtymologyMapComponent } from './etymology-map.component';
+import { BelligerentsMapComponent } from './belligerents-map.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 declare var Datamap: any;
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgClass, EtymologyMapComponent],
+  imports: [RouterOutlet, NgClass, EtymologyMapComponent, BelligerentsMapComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
